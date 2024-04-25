@@ -13,7 +13,7 @@
 
   #page-wrap {
     margin: auto;
-    max-width: 800px;
+    max-width: 1124px;
     min-height: 100vh;
   }
 
