@@ -1,14 +1,31 @@
+import CartPage from '@/views/CartPage.vue'
+import ProductDetailsPage from '@/views/ProductDetailsPage.vue'
+import ProductsPage from '@/views/ProductsPage.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('')
-    // }
+    {
+      path: '/products',
+      name: 'products',
+      component: ProductsPage
+    },
+    {
+      path: '/product-detail/:id',
+      name: 'products-detail',
+      component: ProductDetailsPage
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartPage
+    },
+    {
+      path: '/',
+      redirect: '/products'
+    },
   ]
 })
 
